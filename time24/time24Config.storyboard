@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SJe-63-JKE">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="RC2-gB-0MK">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="SJe-63-JKE" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="REB-cd-jNi">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="163" y="199" width="400" height="116"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+                        <connections>
+                            <outlet property="delegate" destination="SJe-63-JKE" id="sa7-bz-5WP"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="7jW-Ku-TNy" kind="relationship" relationship="window.shadowedContentViewController" id="YbN-Wg-ns3"/>
+                    </connections>
+                </windowController>
+                <customObject id="YX6-ON-EyJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="46"/>
+        </scene>
+        <!--Time24 Config View Controller-->
+        <scene sceneID="xx6-p0-cD6">
+            <objects>
+                <viewController id="7jW-Ku-TNy" customClass="time24ConfigViewController" sceneMemberID="viewController">
+                    <view key="view" id="CLc-i3-KmE">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="116"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VXb-dO-czz">
+                                <rect key="frame" x="18" y="68" width="314" height="17"/>
+                                <textFieldCell key="cell" title="Path" id="Akf-zO-CXt">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wof-Ed-ZcA">
+                                <rect key="frame" x="334" y="49" width="52" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="F6i-0M-mGZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="elO-Ap-m86"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="🔍" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1pH-mj-1nM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="AppleColorEmoji"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="selectPath:" target="7jW-Ku-TNy" id="S6J-nM-cle"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-5x-ntY">
+                                <rect key="frame" x="274" y="13" width="112" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Hxo-Al-oUO"/>
+                                    <constraint firstAttribute="width" constant="100" id="KPF-8I-xor"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I7a-aK-yHd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="confirmConfig:" target="7jW-Ku-TNy" id="69e-yW-fFL"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-p1-633">
+                                <rect key="frame" x="18" y="85" width="99" height="14"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Path to movie file:" id="jlA-lo-Bld">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="VXb-dO-czz" firstAttribute="centerY" secondItem="Wof-Ed-ZcA" secondAttribute="centerY" id="0Em-rk-bpJ"/>
+                            <constraint firstItem="dfp-5x-ntY" firstAttribute="top" secondItem="Wof-Ed-ZcA" secondAttribute="bottom" constant="12" id="368-q8-if6"/>
+                            <constraint firstItem="xfO-p1-633" firstAttribute="leading" secondItem="VXb-dO-czz" secondAttribute="leading" id="51N-Mu-2if"/>
+                            <constraint firstAttribute="trailing" secondItem="Wof-Ed-ZcA" secondAttribute="trailing" constant="20" id="Acz-Zz-vgE"/>
+                            <constraint firstItem="Wof-Ed-ZcA" firstAttribute="leading" secondItem="VXb-dO-czz" secondAttribute="trailing" constant="10" id="FVW-8B-bsY"/>
+                            <constraint firstItem="Wof-Ed-ZcA" firstAttribute="top" secondItem="CLc-i3-KmE" secondAttribute="top" constant="20" id="PjJ-le-HQb"/>
+                            <constraint firstItem="VXb-dO-czz" firstAttribute="leading" secondItem="CLc-i3-KmE" secondAttribute="leading" constant="20" id="Z8w-zu-K7f"/>
+                            <constraint firstAttribute="trailing" secondItem="dfp-5x-ntY" secondAttribute="trailing" constant="20" id="cxW-Nj-x3y"/>
+                            <constraint firstItem="VXb-dO-czz" firstAttribute="top" secondItem="xfO-p1-633" secondAttribute="bottom" id="tSF-F9-En8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pathField" destination="VXb-dO-czz" id="H9s-IU-a1X"/>
+                    </connections>
+                </viewController>
+                <customObject id="jX2-c0-EZK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="311"/>
+        </scene>
+    </scenes>
+</document>

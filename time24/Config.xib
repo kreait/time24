@@ -16,36 +16,55 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="QvC-M9-y7g">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="400" height="116"/>
+            <rect key="contentRect" x="196" y="240" width="500" height="116"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="116"/>
+                <rect key="frame" x="0.0" y="0.0" width="500" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yck-60-PO8">
-                        <rect key="frame" x="18" y="68" width="314" height="17"/>
-                        <textFieldCell key="cell" title="Path" id="S4M-rZ-ydt">
-                            <font key="font" usesAppearanceFont="YES"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q8c-b8-x5l">
-                        <rect key="frame" x="334" y="49" width="52" height="51"/>
+                    <box title="Movie:" translatesAutoresizingMaskIntoConstraints="NO" id="Jrt-Ad-HRS">
+                        <rect key="frame" x="13" y="48" width="474" height="52"/>
+                        <view key="contentView" id="Va2-3o-bCJ">
+                            <rect key="frame" x="2" y="2" width="470" height="35"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yck-60-PO8">
+                                    <rect key="frame" x="6" y="11" width="424" height="17"/>
+                                    <textFieldCell key="cell" title="Path" id="S4M-rZ-ydt">
+                                        <font key="font" usesAppearanceFont="YES"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q8c-b8-x5l">
+                                    <rect key="frame" x="430" y="-3" width="42" height="41"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="JGQ-op-cg9"/>
+                                        <constraint firstAttribute="height" constant="30" id="KAs-dE-Lqp"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="push" title="⇧" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E75-n2-WQ6">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="selectPath:" target="-2" id="ncm-xq-ftM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Q8c-b8-x5l" secondAttribute="bottom" constant="4" id="8eW-bR-3MX"/>
+                                <constraint firstItem="Q8c-b8-x5l" firstAttribute="leading" secondItem="yck-60-PO8" secondAttribute="trailing" constant="8" id="EIu-YH-5Z3"/>
+                                <constraint firstAttribute="trailing" secondItem="Q8c-b8-x5l" secondAttribute="trailing" constant="4" id="Jum-eq-LTt"/>
+                                <constraint firstItem="yck-60-PO8" firstAttribute="leading" secondItem="Va2-3o-bCJ" secondAttribute="leading" constant="8" id="wf8-cW-SiB"/>
+                                <constraint firstItem="yck-60-PO8" firstAttribute="centerY" secondItem="Q8c-b8-x5l" secondAttribute="centerY" id="xFN-JO-13j"/>
+                            </constraints>
+                        </view>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="JGQ-op-cg9"/>
-                            <constraint firstAttribute="height" constant="40" id="KAs-dE-Lqp"/>
+                            <constraint firstAttribute="height" constant="48" id="mbu-3d-1oA"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="🔍" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E75-n2-WQ6">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" size="13" name="AppleColorEmoji"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="selectPath:" target="-2" id="ncm-xq-ftM"/>
-                        </connections>
-                    </button>
+                    </box>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Td-Ftr">
-                        <rect key="frame" x="274" y="13" width="112" height="35"/>
+                        <rect key="frame" x="379" y="11" width="112" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="giq-Sb-R42"/>
                             <constraint firstAttribute="width" constant="100" id="xaY-fQ-5ti"/>
@@ -61,25 +80,13 @@ DQ
                             <action selector="confirm:" target="-2" id="uhK-wb-oJe"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pv1-Sf-ctc">
-                        <rect key="frame" x="18" y="85" width="99" height="14"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Path to movie file:" id="H21-PS-X27">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="NRh-Td-Ftr" firstAttribute="trailing" secondItem="Q8c-b8-x5l" secondAttribute="trailing" id="2R1-6e-wi4"/>
-                    <constraint firstAttribute="trailing" secondItem="Q8c-b8-x5l" secondAttribute="trailing" constant="20" id="KSt-te-HyR"/>
-                    <constraint firstItem="pv1-Sf-ctc" firstAttribute="leading" secondItem="yck-60-PO8" secondAttribute="leading" id="LMa-DW-7Z9"/>
-                    <constraint firstItem="Q8c-b8-x5l" firstAttribute="leading" secondItem="yck-60-PO8" secondAttribute="trailing" constant="10" id="RsH-Mv-Ple"/>
-                    <constraint firstItem="NRh-Td-Ftr" firstAttribute="top" secondItem="Q8c-b8-x5l" secondAttribute="bottom" constant="12" id="XtL-FL-KLJ"/>
-                    <constraint firstItem="Q8c-b8-x5l" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="cXT-X0-hXP"/>
-                    <constraint firstItem="yck-60-PO8" firstAttribute="centerY" secondItem="Q8c-b8-x5l" secondAttribute="centerY" id="dlW-Fk-oWM"/>
-                    <constraint firstItem="yck-60-PO8" firstAttribute="top" secondItem="pv1-Sf-ctc" secondAttribute="bottom" id="fMC-Pn-w1K"/>
-                    <constraint firstItem="yck-60-PO8" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="sc0-vA-8hG"/>
+                    <constraint firstAttribute="trailing" secondItem="Jrt-Ad-HRS" secondAttribute="trailing" constant="16" id="8aC-it-tFf"/>
+                    <constraint firstItem="NRh-Td-Ftr" firstAttribute="trailing" secondItem="Va2-3o-bCJ" secondAttribute="trailing" id="SWI-pT-JWc"/>
+                    <constraint firstItem="Jrt-Ad-HRS" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="16" id="lxV-Ph-qZ4"/>
+                    <constraint firstItem="NRh-Td-Ftr" firstAttribute="top" secondItem="Va2-3o-bCJ" secondAttribute="bottom" constant="8" id="pHp-AU-UKw"/>
+                    <constraint firstItem="Jrt-Ad-HRS" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="xgO-Po-ocR"/>
                 </constraints>
             </view>
         </window>

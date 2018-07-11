@@ -38,13 +38,13 @@
     return [[NSBundle bundleForClass:time24View.class] URLForResource:@"kreait" withExtension:@"mp4"];
 }
 
-- (void)setMovieURL:(NSURL *)path {
-    [self.defaults setObject:path forKey:@"URL"];
+- (void)setMovieURL:(NSURL *)url {
+    [self.defaults setURL:url forKey:@"URL"];
     [self.defaults synchronize];
 }
 
 - (NSURL*)movieURL {
-    NSURL *url = [self.defaults objectForKey:@"URL"];
+    NSURL *url = [self.defaults URLForKey:@"URL"];
     if (!url) {
         url = self.defaultURL;
     }

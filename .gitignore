@@ -3,3 +3,4 @@
 xcschememanagement.plist
 IDEWorkspaceChecks.plist
 *.xcworkspacedata
+.DS_Store

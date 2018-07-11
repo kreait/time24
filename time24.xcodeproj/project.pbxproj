@@ -7,30 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E14B92B20F606F4009BCCCE /* time24Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E14B92A20F606F4009BCCCE /* time24Config.storyboard */; };
-		9E14B92E20F60745009BCCCE /* time24ConfigViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E14B92C20F60745009BCCCE /* time24ConfigViewController.h */; };
-		9E14B92F20F60745009BCCCE /* time24ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E14B92D20F60745009BCCCE /* time24ConfigViewController.m */; };
 		9E76573720F6392D0045BABA /* Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E76573520F6392D0045BABA /* Globals.h */; };
 		9E76573820F6392D0045BABA /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76573620F6392D0045BABA /* Globals.m */; };
 		9E76573A20F63CFD0045BABA /* kreait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E76573920F63CFD0045BABA /* kreait.mp4 */; };
 		9E76573E20F656A10045BABA /* Config.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76573D20F656A10045BABA /* Config.xib */; };
 		9E76574520F659C50045BABA /* Config.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E76574320F659C50045BABA /* Config.h */; };
 		9E76574620F659C50045BABA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76574420F659C50045BABA /* Config.m */; };
+		9E76574820F676B20045BABA /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76574720F676B20045BABA /* CoreServices.framework */; };
 		9ECB30A020F4EEA600AB1877 /* time24View.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECB309F20F4EEA600AB1877 /* time24View.h */; };
 		9ECB30A220F4EEA600AB1877 /* time24View.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB30A120F4EEA600AB1877 /* time24View.m */; };
 		9ECB30AB20F4F0A400AB1877 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECB30AA20F4F0A400AB1877 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E14B92A20F606F4009BCCCE /* time24Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = time24Config.storyboard; sourceTree = "<group>"; };
-		9E14B92C20F60745009BCCCE /* time24ConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = time24ConfigViewController.h; sourceTree = "<group>"; };
-		9E14B92D20F60745009BCCCE /* time24ConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = time24ConfigViewController.m; sourceTree = "<group>"; };
 		9E76573520F6392D0045BABA /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		9E76573620F6392D0045BABA /* Globals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		9E76573920F63CFD0045BABA /* kreait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = kreait.mp4; sourceTree = "<group>"; };
 		9E76573D20F656A10045BABA /* Config.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Config.xib; sourceTree = "<group>"; };
 		9E76574320F659C50045BABA /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		9E76574420F659C50045BABA /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		9E76574720F676B20045BABA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		9ECB309C20F4EEA600AB1877 /* time24.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = time24.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECB309F20F4EEA600AB1877 /* time24View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = time24View.h; sourceTree = "<group>"; };
 		9ECB30A120F4EEA600AB1877 /* time24View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = time24View.m; sourceTree = "<group>"; };
@@ -43,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76574820F676B20045BABA /* CoreServices.framework in Frameworks */,
 				9ECB30AB20F4F0A400AB1877 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,11 +69,8 @@
 			children = (
 				9ECB309F20F4EEA600AB1877 /* time24View.h */,
 				9ECB30A120F4EEA600AB1877 /* time24View.m */,
-				9E14B92C20F60745009BCCCE /* time24ConfigViewController.h */,
-				9E14B92D20F60745009BCCCE /* time24ConfigViewController.m */,
 				9E76573520F6392D0045BABA /* Globals.h */,
 				9E76573620F6392D0045BABA /* Globals.m */,
-				9E14B92A20F606F4009BCCCE /* time24Config.storyboard */,
 				9E76573D20F656A10045BABA /* Config.xib */,
 				9E76574320F659C50045BABA /* Config.h */,
 				9E76574420F659C50045BABA /* Config.m */,
@@ -89,6 +83,7 @@
 		9ECB30A920F4F0A400AB1877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E76574720F676B20045BABA /* CoreServices.framework */,
 				9ECB30AA20F4F0A400AB1877 /* AVKit.framework */,
 			);
 			name = Frameworks;
@@ -102,7 +97,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E76574520F659C50045BABA /* Config.h in Headers */,
-				9E14B92E20F60745009BCCCE /* time24ConfigViewController.h in Headers */,
 				9E76573720F6392D0045BABA /* Globals.h in Headers */,
 				9ECB30A020F4EEA600AB1877 /* time24View.h in Headers */,
 			);
@@ -165,7 +159,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E14B92B20F606F4009BCCCE /* time24Config.storyboard in Resources */,
 				9E76573E20F656A10045BABA /* Config.xib in Resources */,
 				9E76573A20F63CFD0045BABA /* kreait.mp4 in Resources */,
 			);
@@ -181,7 +174,6 @@
 				9ECB30A220F4EEA600AB1877 /* time24View.m in Sources */,
 				9E76574620F659C50045BABA /* Config.m in Sources */,
 				9E76573820F6392D0045BABA /* Globals.m in Sources */,
-				9E14B92F20F60745009BCCCE /* time24ConfigViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -69,11 +69,13 @@
 
     NSURL *url = Globals.shared.movieURL;
     self.player = [AVPlayer playerWithURL:url];
-    self.playerView.player = self.player;
-
-    [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateAnimation) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-        [self.player play];
+    // trying to enforce preloading....
+    [self.player seekToTime:kCMTimeZero toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+        self.playerView.player = self.player;
+        [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+            [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateAnimation) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+            [self.player play];
+        }];
     }];
 }
 

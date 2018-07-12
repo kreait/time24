@@ -10,6 +10,7 @@
 #import <ScreenSaver/ScreenSaver.h>
 #import "time24View.h"
 
+
 @interface Globals ()
 @property (nonatomic) ScreenSaverDefaults *defaults;
 @property (nonatomic, readonly) NSURL *defaultURL;

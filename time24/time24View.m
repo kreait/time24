@@ -25,7 +25,7 @@
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     self = [super initWithFrame:frame isPreview:isPreview];
     
-    [self setAnimationTimeInterval:1/30.0];
+    [self setAnimationTimeInterval:1/30.0]; // all templates include this, is this even needed for a movie?
 
     if (self) {
         NSRect mainRect = CGRectMake(0, 0, frame.size.width, frame.size.height);
@@ -54,6 +54,7 @@
     NSDate *zero = [NSCalendar.currentCalendar dateFromComponents:zeroComp];
     NSTimeInterval daySeconds = [now timeIntervalSinceDate:zero];
 
+    // roll it
     if (duration.value > 0 && duration.timescale > 0) {
         NSTimeInterval trackSeconds = (double)duration.value / (double) duration.timescale;
         NSTimeInterval offset = floor(daySeconds / trackSeconds);
@@ -78,14 +79,14 @@
 
     // rectify every 60 seconds
     updater();
-    self.playerTimer = [NSTimer scheduledTimerWithTimeInterval:10 repeats:YES block:^(NSTimer *timer) {
+    self.playerTimer = [NSTimer scheduledTimerWithTimeInterval:60 repeats:YES block:^(NSTimer *timer) {
         updater();
     }];
 }
 
 - (void)stopAnimation {
     [super stopAnimation];
-    
+
     if (self.playerTimer) {
         [self.playerTimer invalidate];
         self.playerTimer = nil;
@@ -103,6 +104,8 @@
     }
     return self.config;
 }
+
+#pragma mark - view handling
 
 - (void)awakeFromNib {
     [super awakeFromNib];

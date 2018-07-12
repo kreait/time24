@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface Globals : NSObject
+
 @property (nonatomic) NSURL *movieURL;
 
 + (instancetype)shared;
 
 @end
-
-NS_ASSUME_NONNULL_END

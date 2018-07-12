@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E560EB420F7397A00E969C4 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E560EB220F7397900E969C4 /* thumbnail.png */; };
+		9E560EB520F7397A00E969C4 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E560EB320F7397A00E969C4 /* thumbnail@2x.png */; };
 		9E76573720F6392D0045BABA /* Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E76573520F6392D0045BABA /* Globals.h */; };
 		9E76573820F6392D0045BABA /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76573620F6392D0045BABA /* Globals.m */; };
 		9E76573A20F63CFD0045BABA /* kreait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E76573920F63CFD0045BABA /* kreait.mp4 */; };
 		9E76573E20F656A10045BABA /* Config.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76573D20F656A10045BABA /* Config.xib */; };
-		9E76574520F659C50045BABA /* Config.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E76574320F659C50045BABA /* Config.h */; };
-		9E76574620F659C50045BABA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76574420F659C50045BABA /* Config.m */; };
 		9E76574820F676B20045BABA /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76574720F676B20045BABA /* CoreServices.framework */; };
+		9E76574A20F68B690045BABA /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76574920F68B690045BABA /* ScreenSaver.framework */; };
 		9ECB30A020F4EEA600AB1877 /* time24View.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECB309F20F4EEA600AB1877 /* time24View.h */; };
 		9ECB30A220F4EEA600AB1877 /* time24View.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB30A120F4EEA600AB1877 /* time24View.m */; };
 		9ECB30AB20F4F0A400AB1877 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECB30AA20F4F0A400AB1877 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E560EB220F7397900E969C4 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		9E560EB320F7397A00E969C4 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		9E560EB720F73E1600E969C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9E560EB920F7459800E969C4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9E76573520F6392D0045BABA /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		9E76573620F6392D0045BABA /* Globals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
 		9E76573920F63CFD0045BABA /* kreait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = kreait.mp4; sourceTree = "<group>"; };
 		9E76573D20F656A10045BABA /* Config.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Config.xib; sourceTree = "<group>"; };
-		9E76574320F659C50045BABA /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		9E76574420F659C50045BABA /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		9E76574720F676B20045BABA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		9E76574920F68B690045BABA /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
 		9ECB309C20F4EEA600AB1877 /* time24.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = time24.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECB309F20F4EEA600AB1877 /* time24View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = time24View.h; sourceTree = "<group>"; };
 		9ECB30A120F4EEA600AB1877 /* time24View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = time24View.m; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76574A20F68B690045BABA /* ScreenSaver.framework in Frameworks */,
 				9E76574820F676B20045BABA /* CoreServices.framework in Frameworks */,
 				9ECB30AB20F4F0A400AB1877 /* AVKit.framework in Frameworks */,
 			);
@@ -47,9 +52,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E560EB620F7398100E969C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E76573920F63CFD0045BABA /* kreait.mp4 */,
+				9E560EB220F7397900E969C4 /* thumbnail.png */,
+				9E560EB320F7397A00E969C4 /* thumbnail@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9ECB309220F4EEA600AB1877 = {
 			isa = PBXGroup;
 			children = (
+				9E560EB720F73E1600E969C4 /* README.md */,
+				9E560EB920F7459800E969C4 /* LICENSE */,
 				9ECB309E20F4EEA600AB1877 /* time24 */,
 				9ECB309D20F4EEA600AB1877 /* Products */,
 				9ECB30A920F4F0A400AB1877 /* Frameworks */,
@@ -72,10 +89,8 @@
 				9E76573520F6392D0045BABA /* Globals.h */,
 				9E76573620F6392D0045BABA /* Globals.m */,
 				9E76573D20F656A10045BABA /* Config.xib */,
-				9E76574320F659C50045BABA /* Config.h */,
-				9E76574420F659C50045BABA /* Config.m */,
 				9ECB30A320F4EEA600AB1877 /* Info.plist */,
-				9E76573920F63CFD0045BABA /* kreait.mp4 */,
+				9E560EB620F7398100E969C4 /* Resources */,
 			);
 			path = time24;
 			sourceTree = "<group>";
@@ -83,6 +98,7 @@
 		9ECB30A920F4F0A400AB1877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E76574920F68B690045BABA /* ScreenSaver.framework */,
 				9E76574720F676B20045BABA /* CoreServices.framework */,
 				9ECB30AA20F4F0A400AB1877 /* AVKit.framework */,
 			);
@@ -96,7 +112,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E76574520F659C50045BABA /* Config.h in Headers */,
 				9E76573720F6392D0045BABA /* Globals.h in Headers */,
 				9ECB30A020F4EEA600AB1877 /* time24View.h in Headers */,
 			);
@@ -160,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E76573E20F656A10045BABA /* Config.xib in Resources */,
+				9E560EB520F7397A00E969C4 /* thumbnail@2x.png in Resources */,
 				9E76573A20F63CFD0045BABA /* kreait.mp4 in Resources */,
+				9E560EB420F7397A00E969C4 /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +189,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ECB30A220F4EEA600AB1877 /* time24View.m in Sources */,
-				9E76574620F659C50045BABA /* Config.m in Sources */,
 				9E76573820F6392D0045BABA /* Globals.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				DEVELOPMENT_TEAM = L4Y43KC7TD;
 				INFOPLIST_FILE = time24/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
@@ -309,7 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				DEVELOPMENT_TEAM = L4Y43KC7TD;
 				INFOPLIST_FILE = time24/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";

@@ -17,7 +17,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="QvC-M9-y7g">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="500" height="116"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="500" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -89,6 +89,7 @@ DQ
                     <constraint firstItem="Jrt-Ad-HRS" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="xgO-Po-ocR"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="44" y="-371"/>
         </window>
     </objects>
 </document>

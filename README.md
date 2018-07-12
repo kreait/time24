@@ -1,6 +1,6 @@
 # time24 kreait screen saver
 
-A macOS screensaver as a side project at kreait.
+A macOS screensaver with a rolling time sync as a side project at kreait.
 
 ![Screenshot](./screenshot.png)
 

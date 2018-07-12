@@ -11,6 +11,8 @@
 @interface Globals : NSObject
 
 @property (nonatomic) NSURL *movieURL;
+@property (nonatomic, readonly) NSString *movieName;
+@property (nonatomic, readonly) NSURL *defaultURL;
 
 + (instancetype)shared;
 

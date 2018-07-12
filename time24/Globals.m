@@ -13,7 +13,6 @@
 
 @interface Globals ()
 @property (nonatomic) ScreenSaverDefaults *defaults;
-@property (nonatomic, readonly) NSURL *defaultURL;
 @end
 
 @implementation Globals
@@ -35,10 +34,6 @@
     return self;
 }
 
-- (NSURL*) defaultURL {
-    return [[NSBundle bundleForClass:time24View.class] URLForResource:@"kreait" withExtension:@"mp4"];
-}
-
 - (void)setMovieURL:(NSURL *)url {
     [self.defaults setURL:url forKey:@"URL"];
     [self.defaults synchronize];
@@ -50,6 +45,14 @@
         url = self.defaultURL;
     }
     return url;
+}
+
+- (NSString*) movieName {
+    return [Globals.shared.movieURL.absoluteString substringFromIndex:7];
+}
+
+- (NSURL*) defaultURL {
+    return [[NSBundle bundleForClass:time24View.class] URLForResource:@"kreait" withExtension:@"mp4"];
 }
 
 @end

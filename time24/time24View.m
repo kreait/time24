@@ -15,7 +15,6 @@
 @interface time24View ()
 @property (nonatomic) AVPlayerView *playerView;
 @property (nonatomic) AVPlayer *player;
-@property (nonatomic) NSTimer *playerTimer;
 @property (nonatomic, weak) IBOutlet NSWindow *config;
 @property (nonatomic, weak) IBOutlet NSTextField *pathField;
 @end
@@ -40,7 +39,7 @@
     return self;
 }
 
-- (CMTime) seekTimeForDuration: (CMTime) duration {
+- (CMTime)seekTimeForDuration: (CMTime)duration {
     NSDate *now = [NSDate date];
     NSDateComponents *nowComp = [NSCalendar.currentCalendar componentsInTimeZone:NSTimeZone.defaultTimeZone fromDate:now];
     NSDateComponents *zeroComp = [[NSDateComponents alloc] init];
@@ -54,45 +53,44 @@
     NSDate *zero = [NSCalendar.currentCalendar dateFromComponents:zeroComp];
     NSTimeInterval daySeconds = [now timeIntervalSinceDate:zero];
 
-    // roll it
+    // adjust/roll it if available
     if (duration.value > 0 && duration.timescale > 0) {
         NSTimeInterval trackSeconds = (double)duration.value / (double) duration.timescale;
         NSTimeInterval offset = floor(daySeconds / trackSeconds);
         daySeconds = daySeconds - offset * trackSeconds;
     }
 
+//    NSLog(@"⏰ %f vs %f", daySeconds, (double)self.player.currentItem.currentTime.value/(double)self.player.currentItem.currentTime.timescale);
     return CMTimeMakeWithSeconds(daySeconds, 1);
 }
 
 - (void)startAnimation {
     [super startAnimation];
 
-    NSURL *url = [Globals shared].movieURL;
+    NSURL *url = Globals.shared.movieURL;
     self.player = [AVPlayer playerWithURL:url];
     self.playerView.player = self.player;
 
-    void (^updater)(void) = ^() {
-        [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] completionHandler:^(BOOL finished) {
-            [self.player play];
-        }];
-    };
-
-    // rectify every 60 seconds
-    updater();
-    self.playerTimer = [NSTimer scheduledTimerWithTimeInterval:60 repeats:YES block:^(NSTimer *timer) {
-        updater();
+    [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateAnimation) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+        [self.player play];
     }];
 }
 
 - (void)stopAnimation {
     [super stopAnimation];
 
-    if (self.playerTimer) {
-        [self.playerTimer invalidate];
-        self.playerTimer = nil;
-    }
+    [NSNotificationCenter.defaultCenter removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     [self.player pause];
 }
+
+- (void)updateAnimation {
+    [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+        [self.player play];
+    }];
+}
+
+#pragma mark - view handling
 
 - (BOOL)hasConfigureSheet {
     return YES;
@@ -105,24 +103,29 @@
     return self.config;
 }
 
-#pragma mark - view handling
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.pathField.stringValue = [[Globals shared].movieURL.absoluteString substringFromIndex:7];
+    self.pathField.stringValue = Globals.shared.movieName;
 }
 
 - (IBAction)selectPath:(NSButton *)sender {
-    NSOpenPanel *panel = [[NSOpenPanel alloc] init];
-    panel.canChooseDirectories = NO;
-    panel.canChooseFiles = YES;
-    panel.allowedFileTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeVideo];
-    if ([panel runModal] == NSModalResponseOK) {
-        NSURL *url = panel.URLs.firstObject;
-        [Globals shared].movieURL = url;
-        self.pathField.stringValue = [url.absoluteString substringFromIndex:7];
+
+    // reset to default movie if CMD pressed
+    if (NSApp.currentEvent.modifierFlags & NSEventModifierFlagCommand) {
+        Globals.shared.movieURL = Globals.shared.defaultURL;
     }
+    else {
+        NSOpenPanel *panel = [[NSOpenPanel alloc] init];
+        panel.canChooseDirectories = NO;
+        panel.canChooseFiles = YES;
+        panel.allowedFileTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeVideo];
+        if ([panel runModal] == NSModalResponseOK) {
+            NSURL *url = panel.URLs.firstObject;
+            Globals.shared.movieURL = url;
+        }
+    }
+    self.pathField.stringValue = Globals.shared.movieName;
 }
 
 - (IBAction)confirm:(NSButton *)sender {

@@ -15,7 +15,7 @@ If you select a movie running for 24 hours, the displayed time of the movie will
 
 ## Details
 
-- just to test my aging Objective-C skills (and enjoy super short compile times as well as tiny exeutables), the project adheres to the Xcode template (but [Mike Hill](https://blog.viacom.tech/2016/06/27/making-a-macos-screen-saver-in-swift-with-scenekit/) found a way to set up a Screen Saver in Swift).
+- just to test my aging Objective-C skills (and enjoy super short compile times as well as tiny executables), the project adheres to the Xcode template (but [Mike Hill](https://blog.viacom.tech/2016/06/27/making-a-macos-screen-saver-in-swift-with-scenekit/) found a way to set up a Screen Saver in Swift).
 
 - the most annoying part was debugging because attaching an extension to the system Screen Saver is blocked by macOS security policies. `os_log` is not working nicely (at least in High Sierra) due to a lot of data being masked as *<private>* hence the good old `NSLog` (in conjunction with `log stream --process "System Preferences"`) still works fine.
 

@@ -27,6 +27,8 @@ If you select a movie running for 24 hours, the displayed time of the movie will
 
 - the embedded movie is only 25 seconds long and will hence jump every now and then. Look for an 24 hours movie and have more fun!
 
+- b2 was rebuild in Xcode 9 and support for macOS 10.12 was integrated as well (needed to wait/observe for URL being prepared)
+
 ## Installation
 
 Build this project in Xcode (tested under Xcode 10), open the `Products` group and right-click on `time24.saver` to `Open with External Editor`. You may have to change Bundle Identifier to meet your setup.

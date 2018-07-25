@@ -17,9 +17,9 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2018 kreait. All rights reserved.</string>
+	<string>Copyright © 2018 Oliver Michalak. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>time24View</string>
 </dict>

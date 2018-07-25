@@ -3,131 +3,112 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E560EB420F7397A00E969C4 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E560EB220F7397900E969C4 /* thumbnail.png */; };
-		9E560EB520F7397A00E969C4 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E560EB320F7397A00E969C4 /* thumbnail@2x.png */; };
-		9E76573720F6392D0045BABA /* Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E76573520F6392D0045BABA /* Globals.h */; };
-		9E76573820F6392D0045BABA /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76573620F6392D0045BABA /* Globals.m */; };
-		9E76573A20F63CFD0045BABA /* kreait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E76573920F63CFD0045BABA /* kreait.mp4 */; };
-		9E76573E20F656A10045BABA /* Config.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E76573D20F656A10045BABA /* Config.xib */; };
-		9E76574820F676B20045BABA /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76574720F676B20045BABA /* CoreServices.framework */; };
-		9E76574A20F68B690045BABA /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76574920F68B690045BABA /* ScreenSaver.framework */; };
-		9ECB30A020F4EEA600AB1877 /* time24View.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECB309F20F4EEA600AB1877 /* time24View.h */; };
-		9ECB30A220F4EEA600AB1877 /* time24View.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB30A120F4EEA600AB1877 /* time24View.m */; };
-		9ECB30AB20F4F0A400AB1877 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECB30AA20F4F0A400AB1877 /* AVKit.framework */; };
+		DE0CB8C921085DD000E2D03E /* Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0CB8C621085DD000E2D03E /* Globals.h */; };
+		DE0CB8CA21085DD000E2D03E /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0CB8C721085DD000E2D03E /* Globals.m */; };
+		DE0CB8CB21085DD000E2D03E /* Config.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE0CB8C821085DD000E2D03E /* Config.xib */; };
+		DE0CB8CE21085DE600E2D03E /* time24View.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0CB8CC21085DE600E2D03E /* time24View.m */; };
+		DE0CB8CF21085DE600E2D03E /* time24View.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0CB8CD21085DE600E2D03E /* time24View.h */; };
+		DE0CB8D421085DFA00E2D03E /* kreait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DE0CB8D121085DFA00E2D03E /* kreait.mp4 */; };
+		DE0CB8D521085DFA00E2D03E /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0CB8D221085DFA00E2D03E /* thumbnail.png */; };
+		DE0CB8D621085DFA00E2D03E /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0CB8D321085DFA00E2D03E /* thumbnail@2x.png */; };
+		DE0CB8DA2108674900E2D03E /* AVTime24Player.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0CB8D72108611500E2D03E /* AVTime24Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E560EB220F7397900E969C4 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
-		9E560EB320F7397A00E969C4 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
-		9E560EB720F73E1600E969C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9E560EB920F7459800E969C4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9E76573520F6392D0045BABA /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
-		9E76573620F6392D0045BABA /* Globals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
-		9E76573920F63CFD0045BABA /* kreait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = kreait.mp4; sourceTree = "<group>"; };
-		9E76573D20F656A10045BABA /* Config.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Config.xib; sourceTree = "<group>"; };
-		9E76574720F676B20045BABA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
-		9E76574920F68B690045BABA /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
-		9ECB309C20F4EEA600AB1877 /* time24.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = time24.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ECB309F20F4EEA600AB1877 /* time24View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = time24View.h; sourceTree = "<group>"; };
-		9ECB30A120F4EEA600AB1877 /* time24View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = time24View.m; sourceTree = "<group>"; };
-		9ECB30A320F4EEA600AB1877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9ECB30AA20F4F0A400AB1877 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		DE0CB8B921085DA300E2D03E /* time24.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = time24.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0CB8C021085DA300E2D03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE0CB8C621085DD000E2D03E /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		DE0CB8C721085DD000E2D03E /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		DE0CB8C821085DD000E2D03E /* Config.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Config.xib; sourceTree = "<group>"; };
+		DE0CB8CC21085DE600E2D03E /* time24View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = time24View.m; sourceTree = "<group>"; };
+		DE0CB8CD21085DE600E2D03E /* time24View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time24View.h; sourceTree = "<group>"; };
+		DE0CB8D121085DFA00E2D03E /* kreait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = kreait.mp4; sourceTree = "<group>"; };
+		DE0CB8D221085DFA00E2D03E /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		DE0CB8D321085DFA00E2D03E /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		DE0CB8D72108611500E2D03E /* AVTime24Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVTime24Player.m; sourceTree = "<group>"; };
+		DE0CB8D9210861BD00E2D03E /* AVTime24Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTime24Player.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9ECB309920F4EEA600AB1877 /* Frameworks */ = {
+		DE0CB8B521085DA300E2D03E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E76574A20F68B690045BABA /* ScreenSaver.framework in Frameworks */,
-				9E76574820F676B20045BABA /* CoreServices.framework in Frameworks */,
-				9ECB30AB20F4F0A400AB1877 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9E560EB620F7398100E969C4 /* Resources */ = {
+		DE0CB8AF21085DA200E2D03E = {
 			isa = PBXGroup;
 			children = (
-				9E76573920F63CFD0045BABA /* kreait.mp4 */,
-				9E560EB220F7397900E969C4 /* thumbnail.png */,
-				9E560EB320F7397A00E969C4 /* thumbnail@2x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		9ECB309220F4EEA600AB1877 = {
-			isa = PBXGroup;
-			children = (
-				9E560EB720F73E1600E969C4 /* README.md */,
-				9E560EB920F7459800E969C4 /* LICENSE */,
-				9ECB309E20F4EEA600AB1877 /* time24 */,
-				9ECB309D20F4EEA600AB1877 /* Products */,
-				9ECB30A920F4F0A400AB1877 /* Frameworks */,
+				DE0CB8BB21085DA300E2D03E /* time24 */,
+				DE0CB8BA21085DA300E2D03E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9ECB309D20F4EEA600AB1877 /* Products */ = {
+		DE0CB8BA21085DA300E2D03E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ECB309C20F4EEA600AB1877 /* time24.saver */,
+				DE0CB8B921085DA300E2D03E /* time24.saver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9ECB309E20F4EEA600AB1877 /* time24 */ = {
+		DE0CB8BB21085DA300E2D03E /* time24 */ = {
 			isa = PBXGroup;
 			children = (
-				9ECB309F20F4EEA600AB1877 /* time24View.h */,
-				9ECB30A120F4EEA600AB1877 /* time24View.m */,
-				9E76573520F6392D0045BABA /* Globals.h */,
-				9E76573620F6392D0045BABA /* Globals.m */,
-				9E76573D20F656A10045BABA /* Config.xib */,
-				9ECB30A320F4EEA600AB1877 /* Info.plist */,
-				9E560EB620F7398100E969C4 /* Resources */,
+				DE0CB8C821085DD000E2D03E /* Config.xib */,
+				DE0CB8C621085DD000E2D03E /* Globals.h */,
+				DE0CB8C721085DD000E2D03E /* Globals.m */,
+				DE0CB8C021085DA300E2D03E /* Info.plist */,
+				DE0CB8CD21085DE600E2D03E /* time24View.h */,
+				DE0CB8CC21085DE600E2D03E /* time24View.m */,
+				DE0CB8D9210861BD00E2D03E /* AVTime24Player.h */,
+				DE0CB8D72108611500E2D03E /* AVTime24Player.m */,
+				DE0CB8D021085DFA00E2D03E /* Resources */,
 			);
 			path = time24;
 			sourceTree = "<group>";
 		};
-		9ECB30A920F4F0A400AB1877 /* Frameworks */ = {
+		DE0CB8D021085DFA00E2D03E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9E76574920F68B690045BABA /* ScreenSaver.framework */,
-				9E76574720F676B20045BABA /* CoreServices.framework */,
-				9ECB30AA20F4F0A400AB1877 /* AVKit.framework */,
+				DE0CB8D121085DFA00E2D03E /* kreait.mp4 */,
+				DE0CB8D221085DFA00E2D03E /* thumbnail.png */,
+				DE0CB8D321085DFA00E2D03E /* thumbnail@2x.png */,
 			);
-			name = Frameworks;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9ECB309720F4EEA600AB1877 /* Headers */ = {
+		DE0CB8B621085DA300E2D03E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E76573720F6392D0045BABA /* Globals.h in Headers */,
-				9ECB30A020F4EEA600AB1877 /* time24View.h in Headers */,
+				DE0CB8CF21085DE600E2D03E /* time24View.h in Headers */,
+				DE0CB8C921085DD000E2D03E /* Globals.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9ECB309B20F4EEA600AB1877 /* time24 */ = {
+		DE0CB8B821085DA300E2D03E /* time24 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9ECB30A620F4EEA600AB1877 /* Build configuration list for PBXNativeTarget "time24" */;
+			buildConfigurationList = DE0CB8C321085DA300E2D03E /* Build configuration list for PBXNativeTarget "time24" */;
 			buildPhases = (
-				9ECB309720F4EEA600AB1877 /* Headers */,
-				9ECB309820F4EEA600AB1877 /* Sources */,
-				9ECB309920F4EEA600AB1877 /* Frameworks */,
-				9ECB309A20F4EEA600AB1877 /* Resources */,
+				DE0CB8B421085DA300E2D03E /* Sources */,
+				DE0CB8B521085DA300E2D03E /* Frameworks */,
+				DE0CB8B621085DA300E2D03E /* Headers */,
+				DE0CB8B721085DA300E2D03E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -135,68 +116,70 @@
 			);
 			name = time24;
 			productName = time24;
-			productReference = 9ECB309C20F4EEA600AB1877 /* time24.saver */;
+			productReference = DE0CB8B921085DA300E2D03E /* time24.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9ECB309320F4EEA600AB1877 /* Project object */ = {
+		DE0CB8B021085DA200E2D03E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = kreait;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Oliver Michalak";
 				TargetAttributes = {
-					9ECB309B20F4EEA600AB1877 = {
-						CreatedOnToolsVersion = 10.0;
+					DE0CB8B821085DA300E2D03E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 9ECB309620F4EEA600AB1877 /* Build configuration list for PBXProject "time24" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = DE0CB8B321085DA200E2D03E /* Build configuration list for PBXProject "time24" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9ECB309220F4EEA600AB1877;
-			productRefGroup = 9ECB309D20F4EEA600AB1877 /* Products */;
+			mainGroup = DE0CB8AF21085DA200E2D03E;
+			productRefGroup = DE0CB8BA21085DA300E2D03E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9ECB309B20F4EEA600AB1877 /* time24 */,
+				DE0CB8B821085DA300E2D03E /* time24 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9ECB309A20F4EEA600AB1877 /* Resources */ = {
+		DE0CB8B721085DA300E2D03E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E76573E20F656A10045BABA /* Config.xib in Resources */,
-				9E560EB520F7397A00E969C4 /* thumbnail@2x.png in Resources */,
-				9E76573A20F63CFD0045BABA /* kreait.mp4 in Resources */,
-				9E560EB420F7397A00E969C4 /* thumbnail.png in Resources */,
+				DE0CB8CB21085DD000E2D03E /* Config.xib in Resources */,
+				DE0CB8D621085DFA00E2D03E /* thumbnail@2x.png in Resources */,
+				DE0CB8D421085DFA00E2D03E /* kreait.mp4 in Resources */,
+				DE0CB8D521085DFA00E2D03E /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9ECB309820F4EEA600AB1877 /* Sources */ = {
+		DE0CB8B421085DA300E2D03E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ECB30A220F4EEA600AB1877 /* time24View.m in Sources */,
-				9E76573820F6392D0045BABA /* Globals.m in Sources */,
+				DE0CB8CA21085DD000E2D03E /* Globals.m in Sources */,
+				DE0CB8CE21085DE600E2D03E /* time24View.m in Sources */,
+				DE0CB8DA2108674900E2D03E /* AVTime24Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9ECB30A420F4EEA600AB1877 /* Debug */ = {
+		DE0CB8C121085DA300E2D03E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,7 +189,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -248,14 +230,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		9ECB30A520F4EEA600AB1877 /* Release */ = {
+		DE0CB8C221085DA300E2D03E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +246,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -302,35 +282,32 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		9ECB30A720F4EEA600AB1877 /* Debug */ = {
+		DE0CB8C421085DA300E2D03E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L4Y43KC7TD;
 				INFOPLIST_FILE = time24/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kreait.time24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
 		};
-		9ECB30A820F4EEA600AB1877 /* Release */ = {
+		DE0CB8C521085DA300E2D03E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L4Y43KC7TD;
 				INFOPLIST_FILE = time24/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kreait.time24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
@@ -340,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9ECB309620F4EEA600AB1877 /* Build configuration list for PBXProject "time24" */ = {
+		DE0CB8B321085DA200E2D03E /* Build configuration list for PBXProject "time24" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9ECB30A420F4EEA600AB1877 /* Debug */,
-				9ECB30A520F4EEA600AB1877 /* Release */,
+				DE0CB8C121085DA300E2D03E /* Debug */,
+				DE0CB8C221085DA300E2D03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9ECB30A620F4EEA600AB1877 /* Build configuration list for PBXNativeTarget "time24" */ = {
+		DE0CB8C321085DA300E2D03E /* Build configuration list for PBXNativeTarget "time24" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9ECB30A720F4EEA600AB1877 /* Debug */,
-				9ECB30A820F4EEA600AB1877 /* Release */,
+				DE0CB8C421085DA300E2D03E /* Debug */,
+				DE0CB8C521085DA300E2D03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9ECB309320F4EEA600AB1877 /* Project object */;
+	rootObject = DE0CB8B021085DA200E2D03E /* Project object */;
 }

@@ -9,12 +9,13 @@
 #import "time24View.h"
 #import <AVKit/AVKit.h>
 #import <CoreServices/CoreServices.h>
+#import "AVTime24Player.h"
 #import "Globals.h"
 
 
 @interface time24View ()
 @property (nonatomic) AVPlayerView *playerView;
-@property (nonatomic) AVPlayer *player;
+@property (nonatomic) AVTime24Player *player;
 @property (nonatomic, weak) IBOutlet NSWindow *config;
 @property (nonatomic, weak) IBOutlet NSTextField *pathField;
 @end
@@ -39,44 +40,19 @@
     return self;
 }
 
-- (CMTime)seekTimeForDuration: (CMTime)duration {
-    NSDate *now = [NSDate date];
-    NSDateComponents *nowComp = [NSCalendar.currentCalendar componentsInTimeZone:NSTimeZone.defaultTimeZone fromDate:now];
-    NSDateComponents *zeroComp = [[NSDateComponents alloc] init];
-    zeroComp.day = nowComp.day;
-    zeroComp.month = nowComp.month;
-    zeroComp.year = nowComp.year;
-    zeroComp.nanosecond = nowComp.nanosecond;
-    zeroComp.hour = 0;
-    zeroComp.minute = 0;
-    zeroComp.second = 0;
-    NSDate *zero = [NSCalendar.currentCalendar dateFromComponents:zeroComp];
-    NSTimeInterval daySeconds = [now timeIntervalSinceDate:zero];
-
-    // adjust/roll it if available
-    if (duration.value > 0 && duration.timescale > 0) {
-        NSTimeInterval trackSeconds = (double)duration.value / (double) duration.timescale;
-        NSTimeInterval offset = floor(daySeconds / trackSeconds);
-        daySeconds = daySeconds - offset * trackSeconds;
-    }
-
-//    NSLog(@"⏰ %f vs %f", daySeconds, (double)self.player.currentItem.currentTime.value/(double)self.player.currentItem.currentTime.timescale);
-    return CMTimeMakeWithSeconds(daySeconds, 1);
-}
-
 - (void)startAnimation {
-    [super startAnimation];
-
-    NSURL *url = Globals.shared.movieURL;
-    self.player = [AVPlayer playerWithURL:url];
-    // trying to enforce preloading....
-    [self.player seekToTime:kCMTimeZero toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-        self.playerView.player = self.player;
-        [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-            [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateAnimation) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-            [self.player play];
-        }];
-    }];
+	[super startAnimation];
+	
+	NSURL *url = Globals.shared.movieURL;
+	self.player = [AVTime24Player playerWithURL:url preloadCompletion:^(AVPlayerItemStatus status) {
+		if (status == AVPlayerItemStatusReadyToPlay) {
+			self.playerView.player = self.player;
+			[self.player seekToCurrentTime24OnCompletion:^(BOOL finished) {
+				[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateAnimation) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+				[self.player play];
+			}];
+		}
+	}];
 }
 
 - (void)stopAnimation {
@@ -87,9 +63,9 @@
 }
 
 - (void)updateAnimation {
-    [self.player seekToTime:[self seekTimeForDuration:self.player.currentItem.duration] toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
-        [self.player play];
-    }];
+	[self.player seekToCurrentTime24OnCompletion:^(BOOL finished) {
+		[self.player play];
+	}];
 }
 
 #pragma mark - view handling

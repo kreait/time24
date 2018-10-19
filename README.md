@@ -11,7 +11,7 @@ A macOS screensaver with a rolling time sync as a side project at kreait.
 **Rolling Time Sync**
 
 The play time will be synced (in a rolling way) with your current day time!
-If you select a movie running for 24 hours, the displayed time of the movie will be in sync with your current day time - that was the whole point of this experiment.
+If you select a movie running for 24 or 12 hours, the displayed time of the movie will be in sync with your current day time - that was the whole point of this experiment.
 
 ## Details
 
@@ -28,6 +28,8 @@ If you select a movie running for 24 hours, the displayed time of the movie will
 - the embedded movie is only 25 seconds long and will hence jump every now and then. Look for an 24 hours movie and have more fun!
 
 - b2 was rebuild in Xcode 9 and support for macOS 10.12 was integrated as well (needed to wait/observe for URL being prepared)
+
+- due to Mojaves new security policies, NSOpenPanel is not serving the selected file anymore, which is why the new configuration panel now parses the ~/Movies folder for movie files
 
 ## Installation
 

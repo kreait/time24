@@ -18,41 +18,42 @@
 @implementation Globals
 
 + (Globals*)shared {
-    static Globals *_globals;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _globals = [[Globals alloc] init];
-    });
-    return _globals;
+  static Globals *_globals;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    _globals = [[Globals alloc] init];
+  });
+  return _globals;
 }
 
 - (instancetype) init {
-    if ((self = [super init])) {
-        self.defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.kreait.time24"];
-        [self.defaults registerDefaults:@{@"URL": self.defaultURL}];
-    }
-    return self;
+  if ((self = [super init])) {
+    self.defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.kreait.time24"];
+    [self.defaults registerDefaults:@{@"URL": self.defaultURL}];
+  }
+  return self;
 }
 
 - (void)setMovieURL:(NSURL *)url {
-    [self.defaults setURL:url forKey:@"URL"];
-    [self.defaults synchronize];
+  [self.defaults setURL:url forKey:@"URL"];
+  [self.defaults synchronize];
 }
 
 - (NSURL*)movieURL {
-    NSURL *url = [self.defaults URLForKey:@"URL"];
-    if (!url) {
-        url = self.defaultURL;
-    }
-    return url;
+  NSURL *url = [self.defaults URLForKey:@"URL"];
+  if (!url) {
+    url = self.defaultURL;
+  }
+  
+  return url;
 }
 
 - (NSString*) movieName {
-    return [Globals.shared.movieURL.absoluteString substringFromIndex:7];
+  return [Globals.shared.movieURL.absoluteString substringFromIndex:7];
 }
 
 - (NSURL*) defaultURL {
-    return [[NSBundle bundleForClass:time24View.class] URLForResource:@"kreait" withExtension:@"mp4"];
+  return [[NSBundle bundleForClass:time24View.class] URLForResource:@"kreait" withExtension:@"mp4"];
 }
 
 @end

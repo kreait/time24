@@ -75,7 +75,7 @@ static void * const PlayerItemContext = (void*)&PlayerItemContext;
 		daySeconds = daySeconds - offset * trackSeconds;
 	}
 	
-//	NSLog(@"⏰ %f vs %f", daySeconds, (double)self.currentItem.currentTime.value/(double)self.currentItem.currentTime.timescale);
+  NSLog(@"time24 %f vs %f", daySeconds, (double)self.currentItem.currentTime.value/(double)self.currentItem.currentTime.timescale);
 	return CMTimeMakeWithSeconds(daySeconds, 1);
 }
 
